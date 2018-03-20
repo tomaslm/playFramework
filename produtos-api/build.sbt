@@ -9,9 +9,10 @@ scalaVersion := "2.11.7"
 libraryDependencies ++= Seq(
   javaJdbc,
   cache,
-  javaWs
+  javaWs,
+  "org.projectlombok" % "lombok" % "1.16.16"
 )
 
 EclipseKeys.preTasks := Seq(compile in Compile)
 EclipseKeys.projectFlavor := EclipseProjectFlavor.Java
-EclipseKeys.createSrc := EclipseCreateSrc.ValueSet(EclipseCreateSrc.ManagedClasses,EclipseCreateSrc.ManagedResources)
+EclipseKeys.createSrc := EclipseCreateSrc.ValueSet(EclipseCreateSrc.ManagedClasses, EclipseCreateSrc.ManagedResources)

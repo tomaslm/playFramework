@@ -1,0 +1,27 @@
+@*
+ * This template takes a single argument, a String containing a
+ * message to display.
+ *@
+@(message: String)
+
+@*
+ * Call the `main` template with two arguments. The first
+ * argument is a `String` with the title of the page, the second
+ * argument is an `Html` object containing the body of the page.
+ *@
+@main("Welcome to Play") {
+	<h1>Cadastro de Produto</h1>
+	<form action ="/produto/novo" method="POST">
+		<label for="titulo">Título</label>
+		<input type="text" name="titulo" id="titulo">
+		<label for="codigo">Código</label>
+		<input type="text" name="titulo" id="codigo">
+		<label for="descricao">Descrição</label>
+		<textarea type="text" name="titulo" id="descricao"></textarea>
+		<label for="tipo">Tipo</label>
+		<input type="text" name="titulo" id="tipo">
+		<label for=""preco"">Preço</label>
+		<input type="text" name="titulo" id="preco">
+		<input type="submit" value="Cadastrar" id="cadastrar">
+	</form>
+}
