@@ -1,4 +1,4 @@
-name := """produtos-alura-api"""
+name := """produtos-api"""
 
 version := "1.0-SNAPSHOT"
 
@@ -10,7 +10,10 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  "org.postgresql" % "postgresql" % "9.4-1206-jdbc42"
+  javaJpa,
+  jdbc,
+  "org.postgresql" % "postgresql" % "9.4-1206-jdbc42",
+  "org.hibernate" % "hibernate-entitymanager" % "5.1.0.Final"
 )
 
 EclipseKeys.preTasks := Seq(compile in Compile)

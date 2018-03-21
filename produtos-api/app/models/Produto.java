@@ -1,17 +1,28 @@
 package models;
 
 import javax.persistence.Entity;
-
-import com.avaje.ebean.Model;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
-public class Produto extends Model {
+public class Produto {
 
+	@Id
+	@GeneratedValue
+	private Long id;
 	private String titulo;
 	private String codigo;
 	private String tipo;
 	private String descricao;
 	private Double preco;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
 
 	public String getTitulo() {
 		return titulo;
