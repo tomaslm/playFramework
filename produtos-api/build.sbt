@@ -1,4 +1,4 @@
-name := """produtos-api"""
+name := """produtos-alura-api"""
 
 version := "1.0-SNAPSHOT"
 

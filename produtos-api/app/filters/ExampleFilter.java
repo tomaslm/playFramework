@@ -12,7 +12,7 @@ import play.mvc.Http.RequestHeader;
 /**
  * This is a simple filter that adds a header to all requests. It's
  * added to the application's list of filters by the
- * {@link Filters} class.
+ * {@link ExampleFilters} class.
  */
 @Singleton
 public class ExampleFilter extends Filter {

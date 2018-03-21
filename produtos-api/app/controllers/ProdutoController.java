@@ -17,10 +17,11 @@ public class ProdutoController extends Controller {
 	public Result salvaNovoProduto() {
 		Form<Produto> formulario = formularios.form(Produto.class).bindFromRequest();
 		Produto produto = formulario.get();
-		return ok("Formulário foi recebido " + produto.getTitulo());
+		produto.save();
+		return redirect(routes.ProdutoController.formularioDeNovoProduto());
 	}
 
 	public Result formularioDeNovoProduto() {
-		return ok(formularioDeNovoProduto.render("Cadastro de produto"));
+		return ok(formularioDeNovoProduto.render("Cadastrar produto"));
 	}
 }

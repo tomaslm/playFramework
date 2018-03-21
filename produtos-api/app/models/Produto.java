@@ -1,32 +1,17 @@
 package models;
 
-import java.math.BigDecimal;
+import javax.persistence.Entity;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import com.avaje.ebean.Model;
 
-import io.ebean.Model;
-import lombok.Setter;
-
-@Setter
+@Entity
 public class Produto extends Model {
 
-	@Id
-	@GeneratedValue
-	private Long id;
 	private String titulo;
 	private String codigo;
-	private String descricao;
 	private String tipo;
-	private BigDecimal preco;
-
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	private String descricao;
+	private Double preco;
 
 	public String getTitulo() {
 		return titulo;
@@ -44,14 +29,6 @@ public class Produto extends Model {
 		this.codigo = codigo;
 	}
 
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-
 	public String getTipo() {
 		return tipo;
 	}
@@ -60,11 +37,19 @@ public class Produto extends Model {
 		this.tipo = tipo;
 	}
 
-	public BigDecimal getPreco() {
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public Double getPreco() {
 		return preco;
 	}
 
-	public void setPreco(BigDecimal preco) {
+	public void setPreco(Double preco) {
 		this.preco = preco;
 	}
 
