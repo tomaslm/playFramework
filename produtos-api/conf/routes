@@ -12,3 +12,6 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 
 GET /produto/novo					controllers.ProdutoController.formularioDeNovoProduto
 POST /produto/novo					controllers.ProdutoController.salvaNovoProduto
+
+GET /api/produtos					controllers.ApiController.todosOsProdutos
+# GET /api/produtos/tipo/:tipo		controllers.ApiController.doTipo(tipo: String)
