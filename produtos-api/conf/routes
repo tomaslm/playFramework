@@ -11,7 +11,15 @@ GET     /message                    controllers.AsyncController.message
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 GET /produto/novo					controllers.ProdutoController.formularioDeNovoProduto
-POST /produto/novo					controllers.ProdutoController.salvaNovoProduto
 
-GET /api/produtos					controllers.ApiController.todosOsProdutos
-# GET /api/produtos/tipo/:tipo		controllers.ApiController.doTipo(tipo: String)
+GET    /api/produto					controllers.ProdutoController.findAll
+POST   /api/produto					controllers.ProdutoController.save
+GET    /api/produto/:id				controllers.ProdutoController.findById(id:Long)
+PUT    /api/produto/:id				controllers.ProdutoController.update(id:Long)
+DELETE /api/produto/:id				controllers.ProdutoController.deleteById(id:Long)
+
+GET    /api/usuario					controllers.UsuarioController.findAll
+POST   /api/usuario					controllers.UsuarioController.save
+GET    /api/usuario/:id				controllers.UsuarioController.findById(id:Long)
+PUT    /api/usuario/:id				controllers.UsuarioController.update(id:Long)
+DELETE /api/usuario/:id				controllers.UsuarioController.deleteById(id:Long)

@@ -1,14 +1,13 @@
-# --- Created by Ebean DDL
-# To stop Ebean DDL generation, remove this comment and start using Evolutions
-
 # --- !Ups
 
 create table produto (
+  id                            bigserial not null,
   titulo                        varchar(255),
   codigo                        varchar(255),
   tipo                          varchar(255),
   descricao                     varchar(255),
-  preco                         float
+  preco                         float,
+  constraint pk_produto primary key (id)
 );
 
 

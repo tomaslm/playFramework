@@ -2,14 +2,14 @@ package models;
 
 import java.util.List;
 
-public class EnvelopeDeProdutos {
-	private List<Produto> produtos;
+public class Envelope<C> {
+	private List<C> results;
 
-	public EnvelopeDeProdutos(List<Produto> produtos) {
-		this.produtos = produtos;
+	public Envelope(List<C> results) {
+		this.results = results;
 	}
 
-	public List<Produto> getProdutos() {
-		return this.produtos;
+	public List<C> getProdutos() {
+		return this.results;
 	}
 }
