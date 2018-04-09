@@ -1,2 +1,2 @@
 # playFramework
-Play framework tests 2
+Two framework tests 2
