@@ -1,2 +1,2 @@
 # playFramework
-Two framework tests 2
+Merged framework tests 1
